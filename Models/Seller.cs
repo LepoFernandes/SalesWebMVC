@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SalesWebMVC.Models
 {
+    
     public class Seller
     {
         public int Id { get; set; }
