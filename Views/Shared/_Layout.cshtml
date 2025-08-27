@@ -9,14 +9,26 @@
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
+            <!-- Navbar header com botão hambúrguer -->
             <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">Sales Web MVC</a>
             </div>
-            <ul class="nav navbar-nav">
-                <li><a asp-controller="Sellers" asp-action="Index">Sellers</a></li>
-                <li><a asp-controller="Departments" asp-action="Index">Departaments</a></li>
-                <li><a asp-controller="SalesRecords" asp-action="Index">Sales</a></li>
-            </ul>
+
+            <!-- Links do menu -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-controller="Sellers" asp-action="Index">Sellers</a></li>
+                    <li><a asp-controller="Departments" asp-action="Index">Departments</a></li>
+                    <li><a asp-controller="SalesRecords" asp-action="Index">Sales</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -30,8 +42,8 @@
         </div>
     </footer>
 
-    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 
     @RenderSection("Scripts", required: false)
 </body>
